@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <script>
+        function checkTextAnswer() {
+          const userAnswer = document.getElementById("textAnswer").value.toLowerCase();
+          const correctAnswer = "리벤지 포르노"; // 정답 설정
+          const popup = document.getElementById("popup");
+          const popupMessage = document.getElementById("popup-message");
+        
+          if (userAnswer === correctAnswer) {
+            popupMessage.textContent = "정답입니다! \n 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+          } else {
+            popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
+          }
+        
+          popup.style.display = "flex";
+        }
+        
+        function closePopup() {
+          const popup = document.getElementById("popup");
+          popup.style.display = "none";
+        }
+      </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 디지털 성범죄란?</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="container">
+        <main>
+            <p> </p>
+            <h2>디지털 성범죄란?</h2>
+            <p> </p>
+            <h4>디지털 성범죄의 의미</h4>
+            <p> </p>
+            <img src="https://i.ibb.co/m6MHrb2/image.png" width="569" height="321">
+            <p> </p>
+            <p>디지털 성범죄는 인터넷과 디지털 기술을 이용하여 다른 사람들에게 피해를 입히거나 범죄를 저지르는 행위를 말합니다.</p>
+            <p>디지털 환경에서 이루어지므로 피해자와 가해자가 물리적으로 만나지 않아도 발생할 수 있습니다.</p>
+            <p>디지털 성범죄를 통해 만들어진 제작물들은 창작 뿐만 아니라 시청, 공유만으로도 처벌을 받을 수 있습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>디지털 성범죄의 양상</h4>
+            <p> </p>
+            <img src="https://i.ibb.co/fSzwtRB/image.png" width="569" height="356">
+            <p> </p>
+            <p>디지털 성범죄는 아래와 같이 다양하게 일어납니다.</p>
+            <p> </p>
+            <p>- 사이버 성매매</p>
+            <p>온라인에서 성매매를 중개하거나 광고하는 행위로, 불법성을 가질 수 있습니다.</p>
+            <p> </p>
+            <p>- 리벤지 포르노</p>
+            <p>이별한 이후 연인 혹은 이외의 관계의 사람과 함께한 성관계 사진 혹은 동영상을 온라인상에 유포하는</p>
+            <p>행위를 의미합니다. 피해자의 일상을 좀먹고 극심한 정신적 피해를 입힐 수 있습니다.</p>
+            <p> </p>
+            <p>- 성착취물 유포</p>
+            <p>본인의 의사에 반하는 사진이나 동영상을 다른 사람이 인터넷에 유출하는 행위입니다.</p>
+            <p>피해자의 명예를 훼손하고 사적인 영역을 침해합니다.</p>
+            <p> </p>
+            <p>- 아동 포르노그래피</p>
+            <p>아동들을 대상으로 한 성적인 이미지나 동영상을 제작, 유포하는 행위로서 법적으로 매우 엄격하게 처벌됩니다.</p>
+            <p> </p>
+            <p>- 딥페이크 포르노 제작</p>
+            <p>피해자의 이미지를 왜곡하여 성적인 이미지나 동영상에 합성하는 행위를 의미합니다.</p>
+            <p>기술의 발전으로 새롭게 나타난 성범죄 유형입니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>디지털 성범죄 예방하기</h4>
+            <p> </p>
+            <p>1. 개인정보 언급을 삼가하세요.</p>
+            <p>- 자신이 누구인지 알려주는 중요한 정보는 공개하지 마세요.</p>
+            <p> </p>
+            <p>2. 무리하게 친절해지려 하지 마세요.</p>
+            <p>- 불쾌하거나 수상한 점이 있다면 무리해서 친절을 베풀지 마세요.</p>
+            <p> </p>
+            <p>3. 사적인 만남 요구는 거절하세요.</p>
+            <p>- 온라인에서 사적으로 현실에서 만나자고 하는 것은 어떠한 경우든 위험합니다. 하지마세요.</p>
+            <p> </p>
+            <p>4. 신체부위 사진 전송요청은 거절하세요.</p>
+            <p>- 아무리 친해도 이것만큼은 안됩니다. 주의하세요.</p>
+            <p> </p>
+            <p>5. 수상한 사람의 연락은 거부하고 차단하세요.</p>
+            <p>- 갑자기 접근하는데에는 다 이유와 목적이 있습니다.</p>
+            <aside class="quiz">
+                <h2>퀴즈 - 디지털 성범죄란?</h2>
+                <p>이별한 연인에게 복수하고자 하는 의도로 제작하는 음란물은 무엇일까요? (2어절, 맞춤법 주의)</p>
+                <input type="text" id="textAnswer" placeholder="정답을 입력하세요">
+                <p> </p>
+                <button onclick="checkTextAnswer()">정답 확인</button>
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                    <h6 id="popup-message"></h6>
+                    <button onclick="closePopup()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+        </main>
+    </div>
+    
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>

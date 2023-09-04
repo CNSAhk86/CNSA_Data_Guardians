@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 메인페이지</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="container">
+        <main>
+            <h2> </h2>
+            <h2>[Data Guardians] "정보 윤리 홍보 홈페이지" 에 오신 걸 환영합니다!</h2>
+            <p> </p>
+            <p><img src="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" width="146" height="162"></p>
+            <div class="text">
+                <p>이곳은 데이터 가디언즈 봉사단이 직접 제작하여 운영하는 정보 윤리 홍보 홈페이지입니다.</p>
+                <p>홈페이지를 통해 알게된 정보 윤리 상식들을 이용해 퀴즈를 풀어보세요!</p>
+                <p class="bold">"정답 메세지를 캡처해서 오픈 채팅방에 보내면 추첨을 통해 선물을 드립니다!"</p>
+                <p> </p>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>

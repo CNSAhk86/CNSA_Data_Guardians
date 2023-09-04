@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 5.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            var scrollAnimation = document.querySelector(".scroll-animation");
+            if (scrollAnimation) {
+            scrollAnimation.style.display = "none";
+            }
+            }, 3000);
+        });
+    </script>
+    <script>
+        function checkAnswer() {
+            const correctAnswer = document.getElementById("option1").checked;
+            const popup = document.getElementById("popup");
+            const popupMessage = document.getElementById("popup-message");
+          
+            if (correctAnswer) {
+              popupMessage.textContent = "정답입니다! 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+            } else {
+              popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
+            }
+          
+            popup.style.display = "flex";
+          }
+          
+          function closePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+          }
+    </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 정보보호 10계명</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="scroll-animation">
+        <div class="scroll-animation-content">
+            Scroll down
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            <p> </p>
+            <h2>정보보호 10계명</h2>
+            <p> </p>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  01</h3>
+            <h4>ㅤ회원 가입할 때 서비스 이용약관을 꼼꼼히 읽어보기</h4>
+            <p>ㅤ  회원 가입시 여러분들이 동의하는 서비스 약관은 일종의 계약입니다. 번거롭더라도 약관의 각종 내용을 유심히 확인해야합니다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  02</h3>
+            <h4>ㅤ송신인 불명의 스팸메일에 수신거부 설정해두기</h4>
+            <p>ㅤ 수신거부 설정을 통해 스팸메일을 차단합시다. 스팸메일이 지속되면, 업체의 도움을 받는 것도 방법이 될 수 있습니다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  03</h3>
+            <h4>ㅤ굳이 필요없는 개인정보까지 요구하는지 확인하기</h4>
+            <p>ㅤ 특별한 이유 없이 학력, 결혼유무, 월급, 자동차 소유여부, 종교 등을 묻는다면 회원가입을 고려해봐야 합니다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  04</h3>
+            <h4>ㅤ개인정보 관리책임자가 누구인지 확인하기</h4>
+            <p>ㅤ 개인정보를 수집하는 업체는 반드시 관리책임자의 정보를 게시하도록 되어있습니다. 꼭 확인합시다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  05</h3>
+            <h4>ㅤ가입하기 전 탈퇴방법에 관한 설명 확인하기</h4>
+            <p>ㅤ 쉽게 가입하도록 하고 탈퇴는 복잡하게 해놓은 사이트가 많습니다. 잘 확인하고 피해보는 일 없도록 합시다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  06</h3>
+            <h4>ㅤ탈퇴 시 개인정보 파기가능 여부 확인하기</h4>
+            <p>ㅤ 탈퇴해도 개인정보가 남아있으면 탈퇴한 의미가 없습니다. 이용약관에 동의하기 전에 개인정보 보관 항목을 살펴봅시다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  07</h3>
+            <h4>ㅤ자신의 아이디나 비밀번호 경각심을 가지고 관리하기</h4>
+            <p>ㅤ 자신의 계정은 인터넷 상에서 또 하나의 자신입니다. 사이버상의 자신을 철저한 관리를 통해 보호해야 합니다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  08</h3>
+            <h4>ㅤ암호설정을 일상화하기</h4>
+            <p>ㅤ 암호는 자신 정보를 지키는 수단입니다. 일상화하여 평소에도 정보보호를 실천해야 합니다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  09</h3>
+            <h4>ㅤ개인 정보보호 정책이 없는 사이트, 혹은 알 수 없는 사이트 가입하지 않기</h4>
+            <p>ㅤ 위와 같은 유형의 사이트는 사용자의 개인정보를 멋대로 이용할 가능성이 큽니다. 되도록 가입하지 않도록 합시다.</p>
+            </div>
+            <p> </p>
+            <div class="h2-container">
+            <h3>  10</h3>
+            <h4>ㅤ개인정보 유출 의심시 신고하기</h4>
+            <p>ㅤ 관계기관 및 시민단체, 개인정보침해신고센터 (국번없이 1336)로 신고할 수 있습니다.</p>
+            </div>
+            <aside>
+                <h2>퀴즈 - 정보보호 10계명</h2>
+                <p>올바른 정보보호 10계명을 실천한 학생으로 옳은 학생은?</p>
+                <ul>
+                    <li><input type="radio" name="quiz" id="option1"><label for="option1">가입 후 탈퇴가 불가능하다는 사실을 알고 사이트에 가입하지 않은 '이삼성'</label></li>
+                    <li><input type="radio" name="quiz" id="option2"><label for="option2">새로운 비밀번호를 만들고 이를 기억하기 위해 학급 게시판에 자신의 비밀번호를 게시한 '박애플'</label></li>
+                    <li><input type="radio" name="quiz" id="option3"><label for="option3">원하는 이미지 파일을 다운로드 받기 위해 이용약관을 확인하지 않고 바로 회원가입을 한 '김잡스'</label></li>
+                </ul>
+                <p></p>
+                <button onclick="checkAnswer()">정답 확인</button>
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                      <h6 id="popup-message"></h6>
+                      <button onclick="closePopup()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+        </main>
+    </div>
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>

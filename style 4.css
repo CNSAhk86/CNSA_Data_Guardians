@@ -1,0 +1,525 @@
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, main, aside, footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #048ABF;
+    color: #fff;
+    text-decoration: none;
+    top: 20px;
+    height: 1;
+    background-image: url('https://student.cnsa.hs.kr/theme/blue/stw/images/common/bg_headerWrap.png');
+    background-size: cover;
+    background-position: 47% top;
+}
+
+.right-img {
+    transform: translateX(966px);
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 0px;
+}
+
+nav {
+    background-color: #ffffff;
+    height: 38px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+
+nav li {
+    margin: 0 50px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #424242;
+    font-weight: bold;
+    margin: 0 0px;
+    list-style: none;
+}
+
+.hover-text {
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.hover-text:hover {
+    color: #048ABF;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+hr {
+    margin: 10px 0;
+    border-top: 0px solid #000000;
+    height: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0%;
+}
+
+.nav-divider {
+    width: 100%;
+    height: 2.5px;
+    background-color: #0F468C;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    flex: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+main.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInParagraphs {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main h2 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+main.loaded p {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+main.loaded li {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+main.loaded h3, h4, aside {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+main img {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+    border-radius: 10px;
+}
+
+
+main h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2::before {
+    content: "|";
+    margin-right: 10px;
+    color: #0F468C;
+    font-size: 40px;
+    top: -2px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 1px;
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+#link {
+    margin-top: 0px;
+}
+
+.quiz {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+main h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #296bc2;
+    transform: translateX(-100px);
+}
+
+a {
+    padding: 0 .3em;
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.submenu a:hover {
+    color: #fff;
+    background-color: #d9d9d9;
+}
+
+main hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px auto;
+    width: 50%;
+}
+
+main h4 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1px;
+    margin-top: 10px;
+}
+
+main h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #777777;
+    margin-bottom: 1px;
+    margin-top: 10px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+main li:last-child {
+    border-bottom: none;
+}
+
+.scroll-animation {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(15, 70, 140, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    animation: fadeOut 3s ease 3s forwards;
+    }
+
+    .scroll-animation-content {
+    font-size: 14px;
+    text-align: center;
+    }
+    
+    @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+    }
+
+    .flex-container {
+        display: flex;
+    }
+    
+    article {
+        flex: 2;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+.h2-container {
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+}
+
+main aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 65%;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeInParagraphs 1s ease forwards;
+    animation-delay: 0.55s;
+  }
+
+  main aside h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  /* 퀴즈 문제 스타일 */
+  main aside .quiz-question {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  /* 퀴즈 옵션 목록 스타일 */
+  main aside .quiz-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 퀴즈 옵션 스타일 */
+  main aside .quiz-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  /* 퀴즈 옵션 라디오 버튼 스타일 */
+    main aside .quiz-option input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* 버튼 스타일 */
+  main aside button {
+    background-color: #0163cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* 버튼 호버 효과 스타일 */
+  main aside button:hover {
+    background-color: #013f81;
+  }
+  
+
+aside p{
+    color: #414141;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .popup button {
+    background-color: #0163cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    margin-bottom: 1px;
+  }
+
+  .popup1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content1 {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .popup1 button {
+    background-color: #0163cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    margin-bottom: 1px;
+  }
+
+  .popup button:hover {
+    background-color: #013f81;
+  }
+
+    button {
+        margin: 0;
+        padding: 0.5rem 1rem;
+    
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    
+        display: inline-block;
+        width: auto;
+    
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        transition: 0.5s;
+
+        background-color: #c4c4c4;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    button:hover {
+        background-color: #838383;
+        color: #f0f0f0;
+    }
+
+    #textAnswer {
+        width: 97%; /* 너비 100%로 화면에 꽉 차게 표시 */
+        padding: 10px; /* 내부 여백 설정 */
+        border: 1px solid #ccc; /* 테두리 설정 */
+        border-radius: 5px; /* 둥근 테두리 설정 */
+        font-size: 16px; /* 폰트 크기 설정 */
+      }
+      
+      /* 주관식 문제 입력란 호버 효과 */
+      #textAnswer:hover {
+        border-color: #007bff; /* 호버 시 테두리 색 변경 */
+      }
+      
+      /* 주관식 문제 입력란 포커스 효과 */
+      #textAnswer:focus {
+        outline: none; /* 포커스 시 기본 아웃라인 제거 */
+        border-color: #007bff; /* 포커스 시 테두리 색 변경 */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 포커스 시 그림자 효과 */
+      }
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #9f9f9f;
+    padding: 10px;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(229, 229, 229, 1);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer image {
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+footer p {
+    margin: 0;
+    margin-left: 20px;
+}

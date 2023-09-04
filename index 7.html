@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <script>
+        function checkTextAnswer() {
+          const userAnswer = document.getElementById("textAnswer").value.toLowerCase();
+          const correctAnswer = "현저성"; // 정답 설정
+          const popup = document.getElementById("popup");
+          const popupMessage = document.getElementById("popup-message");
+        
+          if (userAnswer === correctAnswer) {
+            popupMessage.textContent = "정답입니다! 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+          } else {
+            popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
+          }
+        
+          popup.style.display = "flex";
+        }
+        
+        function closePopup() {
+          const popup = document.getElementById("popup");
+          popup.style.display = "none";
+        }
+      </script>
+      <script>
+        window.addEventListener('load', function () {
+            var popup1 = document.getElementById("popup1");
+            popup1.style.display = "none";
+        });
+        
+        function checkOveruse() {
+            var checklistItems = document.querySelectorAll("aside ul li input[type='checkbox']");
+            var checkedCount = 0;
+        
+            for (var i = 0; i < checklistItems.length; i++) {
+                if (checklistItems[i].checked) {
+                    checkedCount++;
+                }
+            }
+        
+            var resultMessage = "";
+        
+            if (checkedCount >= 8) {
+                resultMessage = "스마트폰 과의존인 것 같습니다. ";
+            } else if (checkedCount >=5) {
+                resultMessage = "스마트폰 과의존 가능성이 있습니다. 주의하세요.";
+            } else {
+                resultMessage = "바람직한 스마트폰 이용자시네요! 지금처럼만 사용해주세요.";
+            }
+        
+            // 팝업에 결과 표시
+            var popup1 = document.getElementById("popup1");
+            var resultPopup = document.getElementById("resultMessage");
+            resultPopup.textContent = resultMessage;
+            popup1.style.display = "flex"; // 팝업을 표시합니다.
+        }
+        
+        function closePopup1() {
+            // 팝업 닫기
+            var popup1 = document.getElementById("popup1");
+            popup1.style.display = "none"; // 팝업을 숨깁니다.
+        }
+      </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 스마트폰 과의존이란?</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="container">
+        <main>
+            <p> </p>
+            <h2>스마트폰 과의존이란?</h2>
+            <p> </p>
+            <h4>스마트폰 과의존의 의미</h4>
+            <p> </p>
+            <p>스마트폰은 우리의 일상 생활을 혁신적으로 변화시켰으며, 소통, 정보 접근, 엔터테인먼트 등</p>
+            <p>다양한 측면에서 큰 편익을 제공하지만, 이를 과도하게 사용함으로써 일상 생활과 심리적, 사회적 건강에 </p>
+            <p>부정적인 영향을 끼칠 수도 있습니다.</p>
+            <p>그 사례가 바로 스마트폰 과의존인데요,</p>
+            <p>스마트폰 과의존은 스마트폰과 같은 모바일 기기에 과도하게 의존하는 것을 나타내는 말입니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>스마트폰 과의존의 판별</h4>
+            <p> </p>
+            <p>스마트폰을 일상생활에서 이렇게 사용하고 있다면 우리는 일반적으로 스마트폰 과의존이라고 판단할 수 있습니다.</p>
+            <p>현저성 - 개인의 삶에서 스마트폰의 이용이 다른 생활 패턴보다 더 두드러지고 중요한 것을 의미합니다.</p>
+            <p>조절 실패 - 자신의 주관적 목표에 대비해서 스마트폰을 더 많이 사용하는 것을 의미합니다.</p>
+            <p>문제적 결과 - 스마트폰의 이용으로 부정적인 경험을 했음에도 불구하고 이를 개선하지 않는 것을 말합니다.</p>
+            <p> </p>
+            <p> </p>
+            <p>아래의 진단 목록을 통해 본인이 과의존인지 아닌지 판단해볼까요?</p>
+            <aside id="checklist">
+                <h2>스마트폰 과의존 체크리스트</h2>
+                <p>해당되는 것에 체크표시를 한 뒤 과의존 여부를 확인해보세요</p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="item1">
+                        <label for="item1">스마트폰 이용시간을 줄이려 할 때마다 실패한다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item2">
+                        <label for="item2">스마트폰으로 인해 제출 직전까지 숙제를 미뤄본 적이 있다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item3">
+                        <label for="item3">스마트폰이 옆에 있으면 다른 일에 집중하기 어렵다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item4">
+                        <label for="item4">스마트폰 생각이 머리에서 떠나지 않는다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item5">
+                        <label for="item5">스마트폰을 이용하고 싶은 충동을 강하게 느낀다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item6">
+                        <label for="item6">스마트폰 이용 때문에 건강에 문제가 생긴 적이 있다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item7">
+                        <label for="item7">스마트폰 이용 때문에 가족과 심하게 다툰 적이 있다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item8">
+                        <label for="item8">스마트폰 때문에 업무(학업 혹은 직업 등) 수행에 어려움이 있다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item9">
+                        <label for="item9">스마트폰 이용 때문에 친구 혹은 동료, 사회적 관계에서 심한 갈등을 경험한 적이 있다.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item10">
+                        <label for="item10">스마트폰 이용시간을 조절 하는 것이 어렵다.</label>
+                    </li>
+                    <!-- 다른 체크 박스 아이템들도 추가 -->
+                </ul>
+                <p></p>
+                <button onclick="checkOveruse()">과의존 여부 확인</button>
+                
+                <!-- 딤처리된 레이어 팝업 -->
+                <div class="popup1" id="popup1">
+                    <div class="popup-content1">
+                        <h6 id="resultMessage"></h6>
+                        <button onclick="closePopup1()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p>어떤 결과가 나오셨나요?</p>
+            <p>체크리스트 내에서 자신에게 해당되는 질문들이 너무 많았나요? 모두 내 이야기 같나요?</p>
+            <p>저는 과의존 가능성이 있다고 나옵니다.</p>
+            <p>혹시라도 과의존이라는 결과가 나왔다면, 혹은 가능성이 있다고 나왔다면, 지금부터라도 고치려고 행동하려는</p>
+            <p>자세가 필요할 것 같습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>스마트폰 과의존에서 벗어나기</h4>
+            <p> </p>
+            <p>지금까지 우리는 스마트폰 과의존이 무엇이며, 직접 스마트폰 과의존인지 아닌지 자가진단까지 해보았습니다.</p>
+            <p>그렇다면 스마트폰 과의존에서 벗어나기 위해서, 우리는 어떤 노력을 기울일 수 있을까요?</p>
+            <p>사실 단순합니다. 모두가 알고 있을 내용일 수도 있지만, 이 글을 보고 다시 한번 상기할 수 있길 바라며</p>
+            <p>스마트폰 과의존을 해결하기 위한 몇가지 방법들을 소개해드리겠습니다.</p>
+            <p> </p>
+            <p> </p>
+            <p>첫 번째, 화면 시간관리 앱을 사용해봅시다.</p>
+            <p>자기 스스로도 스마트폰 사용이 주체되지 않는다면, 문명의 힘을 빌려봅시다.</p>
+            <p>스마트폰 시간관리앱을 다운받고 강제적으로 스마트폰 사용시간을 줄여봅시다.</p>
+            <p>참고로 비상시에는 작동이 가능하도록 하지 않으면 위급시 스마트폰을 사용하지 못할지도 모르니</p>
+            <p>주의하세요.</p>
+            <p> </p>
+            <p> </p>
+            <p>두 번째, 스마트폰을 대체할 새로운 취미를 찾아봅시다.</p>
+            <p>전자기기와 멀어질 수만 있다면 어떤 건전한 취미든 상관없습니다.</p>
+            <p>운동, 책읽기, 친구들과 만나기 등 건강한 도파민을 형성할 수 있는 활동들을 해보세요.</p>
+            <p>저는 개인적으로 스마트폰 대신에 책읽기를 해보고자 노력 중에 있습니다.</p>
+            <p> </p>
+            <p> </p>
+            <p>세 번째, 자기관리 목표를 설정해봅시다.</p>
+            <p>어쩌면 내가 지금 손에 쥔 스마트폰을 놓지 못하는 이유는</p>
+            <p>미래에 대한 불확실성을 지니고 있기 때문일 수도 있는데요, 그렇다면 </p>
+            <p>적절한 목표를 세워서 삶을 능동적으로 만드는 것도 좋은 방법이 될 수 있습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>바람직한 스마트폰 사용</h4>
+            <p> </p>
+            <p>앞서 언급했다시피 스마트폰은 확실히 혁신적이고 효율적인 발명품입니다.</p>
+            <p>하지만 과유불급이라고, 너무 많이 사용하는 것은 확실히 좋지않죠.</p>
+            <p>우리는 스마트폰을 바람직하게 사용할 줄 알아야합니다. 인간이 기계 따위에게 잠식당할 순 없잖아요?</p>
+            <p>문명의 노예가 아닌, 문명을 노예처럼 다룰 줄 아는 큰사이언이 됩니다.</p>
+            <aside class="quiz">
+                <h2>퀴즈 - 스마트폰 과의존이란?</h2>
+                <p>개인의 삶에서 스마트폰이 두드러지게 중요한 역할을 차지하게 되는 것을 뭐라고 부를까요?</p>
+                <input type="text" id="textAnswer" placeholder="정답을 입력하세요">
+                <p> </p>
+                <button onclick="checkTextAnswer()">정답 확인</button>
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                    <h6 id="popup-message"></h6>
+                    <button onclick="closePopup()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+        </main>
+    </div>
+    
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>

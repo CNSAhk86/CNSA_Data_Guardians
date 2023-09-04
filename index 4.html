@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <script>
+        function checkTextAnswer() {
+          const userAnswer = document.getElementById("textAnswer").value.toLowerCase();
+          const correctAnswer = "개인정보"; // 정답 설정
+          const popup = document.getElementById("popup");
+          const popupMessage = document.getElementById("popup-message");
+        
+          if (userAnswer === correctAnswer) {
+            popupMessage.textContent = "정답입니다! 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+          } else {
+            popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
+          }
+        
+          popup.style.display = "flex";
+        }
+        
+        function closePopup() {
+          const popup = document.getElementById("popup");
+          popup.style.display = "none";
+        }
+      </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 개인정보란?</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="container">
+        <main>
+            <p> </p>
+            <h2>개인정보란?</h2>
+            <p> </p>
+            <h4>개인정보의 의미</h4>
+            <p> </p>
+            <p>개인정보란 어떠한 개인이 가지는 민감하고 중요한 정보를 의미합니다.</p>
+            <p>개인정보는 전자상거래, 고객관리, 금융거래 등 사회의 구성, 유지, 발전을 위한 필수적인 요소로서 기능하고 있습니다.</p>
+            <p>특히 데이터경제 시대를 맞이하여 개인정보와 같은 데이터는 기업 및 기관의 입장에서도 부가가치를 창출할 수 있는 자산적 가치로서 높게 평가되고 있습니다.</p>
+            <img src="https://i.ibb.co/Xxq9NWR/638284948353983156.png" width="496" height="215">
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <h4>개인정보 침해의 심각성</h4>
+            <p> </p>
+            <p>그러나 개인정보가 누군가에 의해 악의적인 목적으로 이용되거나 유출될 경우 개인의 사생활에 큰 피해를 줄 뿐만 아니라 개인 안전과 재산에 피해를 줄 수 있습니다.</p>
+            <p>또 유출된 개인정보는 스팸메일, 불법 텔레마케팅 등에 악용되어 개인에게 원치 않는 광고성 정보가 끊임없이 전송되는 동시에 대량의 스팸메일 발송을 위한 </p>
+            <P>계정 도용, 보이스 피싱 등 범죄행위에 악용될 우려가 있습니다.</P>
+            <p>뿐만 아니라 한번 유출된 개인정보는 회수가 사실상 불가능하기 때문에 더욱 심각하다고 할 수 있습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>개인정보의 중요성</h4>
+            <P> </P>
+            <P>사회가 산업사회에서 정보사회를 넘어 4차 산업혁명의 시대로 발전함에 따라 개인정보의 범위와 영역이 확장되고 있습니다.</P>
+            <P>또, 산업사회에서 개인정보로 인정되지 않거나, 정보항목으로 존재하지 않던 것들이 점차 기술이 발전함에 따라 개인정보의 영역에 포함되고 있습니다.</P>
+            <P>정보화 시대로 인해 중요해진 우리의 개인정보, 잘 지키고 철저히 보호하여 지킬 필요가 있겠습니다.</P>
+            <aside class="quiz">
+                <h2>퀴즈 - 개인정보란?</h2>
+                <p>어떠한 개인의 민감하고 중요한 정보를 뭐라고 부를까요? (띄어쓰기 없음)</p>
+                <input type="text" id="textAnswer" placeholder="정답을 입력하세요">
+                <p> </p>
+                <button onclick="checkTextAnswer()">정답 확인</button>
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                    <h6 id="popup-message"></h6>
+                    <button onclick="closePopup()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+        </main>
+    </div>
+    
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>

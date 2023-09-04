@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style 4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap">
+    <link rel="icon" href="https://www.cnsa.hs.kr/images/hpw/intro/img_symbol.png" type="image/x-icon" sizes="10x32">
+    <style>
+        .submenu {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            border: 2px solid #0F468C;
+            padding: 10px;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 180px;
+        }
+        
+        .dropdown:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 5px 0;
+        }
+        
+        .submenu a {
+            text-decoration: none;
+            color: #757575;
+            transition: color 0.3s;
+            display: block;
+            padding: 5px;
+        }
+        
+        .submenu a:hover {
+            color: #048ABF;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("main").classList.add("loaded");
+        });
+    </script>
+    <script>
+        function checkTextAnswer() {
+          const userAnswer = document.getElementById("textAnswer").value.toLowerCase();
+          const correctAnswer = "사이버 스토킹"; // 정답 설정
+          const popup = document.getElementById("popup");
+          const popupMessage = document.getElementById("popup-message");
+        
+          if (userAnswer === correctAnswer) {
+            popupMessage.textContent = "정답입니다! 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+          } else {
+            popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
+          }
+        
+          popup.style.display = "flex";
+        }
+        
+        function closePopup() {
+          const popup = document.getElementById("popup");
+          popup.style.display = "none";
+        }
+      </script>
+    <title>충남삼성고등학교 - CNSA 정보 윤리 홍보 홈페이지 - 사이버 폭력이란?</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+            <img src="http://10.1.100.32/images/common/logo.png" width="210" height="57" alt="Left Image" class="left-img">
+            </a>
+            <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
+        </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html" class="hover-text">메인페이지</a></li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">봉사단 소개</a>
+                <ul class="submenu">
+                    <li><a href="index 2.html">활동 개요 및 목적</a></li>
+                    <li><a href="index 3.html">봉사단원 소개</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">개인정보에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 4.html">개인정보의 중요성</a></li>
+                    <li><a href="index 5.html">정보보호 10계명</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">인터넷 사용에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 6.html">네티켓이란?</a></li>
+                    <li><a href="index 7.html">스마트폰 과의존이란?</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li class="dropdown">
+                <a href="#" class="hover-text">사이버 범죄에 대하여</a>
+                <ul class="submenu">
+                    <li><a href="index 8.html">사이버 폭력이란?</a></li>
+                    <li><a href="index 9.html">디지털 성범죄란?</a></li>
+                    <li><a href="index 10.html">불법 사이버 도박이란?</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-divider"></div>
+    <div class="container">
+        <main>
+            <p> </p>
+            <h2>사이버 폭력이란?</h2>
+            <p> </p>
+            <h4>사이버 폭력의 의미</h4>
+            <p> </p>
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdag0yw%2FbtrAyNxp5ci%2FkZutbwkSvjnKqVAjwySIUK%2Fimg.jpg" width="640" height="426">
+            <p> </p>
+            <p>사이버 폭력은 인터넷과 디지털 기술을 통해 다른 개인이나 그룹에게 위협, 공격, 괴롭힘, 명예 훼손, </p>
+            <p>스토킹 등을 행하는 행위를 말합니다. 온라인 상에서 일어나는 거의 모든 폭력적인 행위를 모두 일컬으며,</p>
+            <p>한 사람을 심하게는 죽음에까지 몰아넣을 수 있어 현실에서의 폭력과 다를 바가 없습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>사이버 폭력의 양상</h4>
+            <p> </p>
+            <p>사이버 폭력은 다양한 양상으로 발생합니다.</p>
+            <p>아래는 그 양상들 중 일부를 정리해둔 것입니다.</p>
+            <p> </p>
+            <p>- 사이버 스토킹</p>
+            <p>피해자를 온라인상에서 괴롭히고 추적하는 행위를 의미합니다.</p>
+            <p>개인정보 침해를 유발하거나 피해자에게 치유할 수 없는 정신적 상처를 남길 수도 있습니다.</p>
+            <p> </p>
+            <p>- 사이버 불링</p>
+            <p>온라인 상에서 한 사람에게 지속적으로 모욕, 비하, 협박 등을 하는 행위로</p>
+            <p>현재 우리 나이대에 가장 많이 발생하는 사이버 폭력이기도 합니다.</p>
+            <p> </p>
+            <p>- 사이버 명예훼손</p>
+            <p>불필요한 사실 혹은 가짜 정보를 의도적으로 퍼뜨려 피해자의 명예를 훼손하는 행위를 의미합니다.</p>
+            <p>한번 퍼뜨린 정보는 잘 지워지지 않기 때문에 굉장히 치명적인 폭력 행위입니다.</p>
+            <p> </p>
+            <p>- 사이버 성희롱</p>
+            <p>성적으로 부적절한 메세지, 혹은 사진이나 동영상을 공유하는 행위를 의미합니다.</p>
+            <p>상당한 불쾌감을 유발할 수 있으며, 피해자는 성적 수치심 또한 느낄 수 있습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>사이버 폭력의 심각성</h4>
+            <p> </p>
+            <p>이 사이버 폭력의 가장 큰 문제점은, 사이버 폭력을 행하는 사람이 이게 사이버 폭력인지 아닌지를</p>
+            <p>제대로 알지 못한다는 사실입니다. 한 마디로 무지한 거죠. 자신이 하는 행동이 폭력인지 아닌지조차</p>
+            <p>구별하지 못한 채로 둔감하게 오늘도 누군가를 상처입히고 있다는 겁니다.</p>
+            <p> </p>
+            <p>사실 제가 정보윤리 봉사단을 시작하게 된 것도 바로 이 사이버 폭력 때문입니다.</p>
+            <p>수차례 사이버 폭력 현장을 목격했지만, 공통된 특징은 다들 이것을 그냥 장난으로만 인지하고 있었습니다.</p>
+            <p>"그냥 평소에도 이렇게 말하니까," "악의는 없으니까"</p>
+            <p>가해자들은 사이버 폭력을 행하는 자신에 대한 자각이 없었습니다.</p>
+            <p> </p>
+            <p>여러분들 중에서도 혹시 있을지도 모릅니다.</p>
+            <p>현실이든 사이버 공간이든</p>
+            <p>당신이 오늘 사소하게 내뱉은 그 한 마디가, 평소해도 해왔던 그 행동이</p>
+            <p>오늘도 누군가를 삶의 벼랑 끝으로 내몰고 있습니다.</p>
+            <p> </p>
+            <p>여러분의 생활을 한번 돌아보세요.</p>
+            <p>혹시 누군가를 삶의 벼랑으로 떠밀지는 않았나요?</p>
+            <p>자신의 행동에 책임을 가지고 타인을 존중하는 여러분이 되었으면 좋겠습니다.</p>
+            <p> </p>
+            <p> </p>
+            <h4>사이버 폭력을 당했다면?</h4>
+            <p> </p>
+            <p>사이버 폭력을 당했다라는 판단이 들면, 일단 증거확보가 우선입니다.</p>
+            <p>사이버 폭력은 법적 처벌이 가능하기 때문에 확실한 증거를 모아두는 것이 좋습니다.</p>
+            <p>이후에는 청소년 전화 1388 등 각종 전문기관에 문의하여 사이버 폭력을 대처할 수 있습니다.</p>
+            <p> </p>
+            <p>당했다 싶으면 망설이지 말고 바로 대처하세요.</p>
+            <p>당신은 아무 잘못이 없습니다.</p>
+            <aside class="quiz">
+                <h2>퀴즈 - 사이버 폭력이란?</h2>
+                <p>피해자를 온라인 상에서 괴롭히고 추적하는 행위를 뭐라고 부를까요? (2어절)</p>
+                <input type="text" id="textAnswer" placeholder="정답을 입력하세요">
+                <p> </p>
+                <button onclick="checkTextAnswer()">정답 확인</button>
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                    <h6 id="popup-message"></h6>
+                    <button onclick="closePopup()">닫기</button>
+                    </div>
+            </aside>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+        </main>
+    </div>
+    
+    <footer>
+        <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
+        <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
+    </footer>
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector("h2").classList.add("fadeInUp");
+        });
+    </script>
+</body>
+</html>
