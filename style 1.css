@@ -1,4 +1,14 @@
-body, h1, h2, h3, ul, li {
+body,
+h1,
+h2,
+h3,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,7 +17,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header, nav, main, aside, footer {
+header,
+nav,
+main,
+aside,
+footer {
     padding: 20px;
 }
 
@@ -24,6 +38,12 @@ header {
     justify-content: space-between;
 }
 
+.img-link {
+    color: inherit;
+    /* 링크의 색상을 부모 요소의 색상으로 상속 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+}
 
 
 .right-img {
@@ -48,7 +68,7 @@ nav ul {
 }
 
 .blue {
-    color:#0F468C;
+    color: #0F468C;
 }
 
 nav li {
@@ -127,6 +147,7 @@ main.loaded {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -138,6 +159,7 @@ main.loaded {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -268,8 +290,277 @@ footer p {
     .container {
         flex-direction: column;
     }
-    
+
     aside {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding-right: 0;
+        /* 우측 패딩 제거 */
+        margin-right: 0;
+        /* 우측 마진 제거 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    main h2 {
+        font-size: 34px;
+    }
+}
+
+/* 모바일 화면에서 푸터 스타일링 */
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+        /* 오른쪽 마진을 0으로 설정 */
+        position: static;
+        /* 기본 플로우에 따라 배치 */
+        font-size: 10px;
+        padding-right: 0;
+        /* 우측 패딩 제거 */
+        margin-right: 0;
+        /* 우측 마진 제거 */
+    }
+
+    footer image {
+        width: 76.5px;
+        height: 20px;
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+}
+
+/* 모바일 화면에서 .right-img 스타일 수정 */
+@media screen and (max-width: 768px) {
+    .right-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+        /* 여백 추가 */
+    }
+}
+
+/* 푸터 스타일 수정 */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #9f9f9f;
+    padding: 10px;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(229, 229, 229, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+/* 모바일 화면에서 푸터 스타일 수정 */
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 15px;
+        padding-right: 0;
+        /* 우측 패딩 제거 */
+        margin-right: 0;
+        /* 우측 마진 제거 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .right-img {
+        transform: translateX(946px);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0%;
+}
+
+#menu {
+    display: none;
+}
+
+/* 모바일 화면에서 햄버거 메뉴 아이콘 보이기 */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: block;
+    }
+}
+
+/* 모바일 화면에서 가로로 배치 */
+@media screen and (max-width: 768px) {
+
+    .left-img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    header a {
+        color: hidden;
+    }
+
+    html.open {
+        overflow: hidden;
+    }
+
+    #menu.open {
+        left: 0px;
+    }
+
+    .page_cover.open {
+        display: block;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .close {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    #menu {
+        width: 150px;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: -202px;
+        z-index: 10;
+        border: 1px solid #c9c9c9;
+        background-color: white;
+        text-align: center;
+        font-weight: bold;
+        transition: All 0.2s ease;
+        -webkit-transition: All 0.2s ease;
+        -moz-transition: All 0.2s ease;
+        -o-transition: All 0.2s ease;
+        padding-top: 50px;
+        padding-left: 0px;
+        padding-right: 40px;
+    }
+
+    #menu a {
+        padding: 0;
+        text-decoration: none;
+        font-size: 18px;
+        color: #25a4cd;
+        display: block;
+        transition: 0.3s;
+    }
+
+    #menu.open {
+        left: 0px;
+    }
+
+    .page_cover.open {
+        display: block;
+    }
+
+    .page_cover {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 4;
+        display: none;
+    }
+
+    #menu ul {
+        width: 190px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu ul.nav li {
+        position: relative;
+        float: left;
+        width: 100%;
+        list-style-type: none;
+        font-size: 18px;
+    }
+
+    #menu ul.nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        text-indent: 20px;
+        text-align: left;
+        color: #25a4cd;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #menu ul.nav li a:hover {
+        background: #eee;
+    }
+
+    #menu ul.nav li .sub_mobile a {
+        position: relative;
+        float: left;
+        display: block;
+        width: 100%;
+        z-index: 999;
+        background: #ccc;
+    }
+
+    #menu ul.nav li .sub_mobile a:hover {
+        background: #787878;
+        color: #fff;
+        z-index: 999;
     }
 }
