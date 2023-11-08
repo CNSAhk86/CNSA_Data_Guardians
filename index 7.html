@@ -57,7 +57,7 @@
           const popupMessage = document.getElementById("popup-message");
         
           if (userAnswer === correctAnswer) {
-            popupMessage.textContent = "정답입니다! 오픈 채팅방에 본 메세지와 문제 전체를 캡쳐해서 공유해주세요!";
+            popupMessage.textContent = "정답입니다! 구글 폼에 본 정답을 입력해주세요!";
           } else {
             popupMessage.textContent = "오답입니다. 닫기를 누르고 다시 시도해보세요.";
           }
@@ -119,8 +119,42 @@
             </a>
             <img src="https://student.cnsa.hs.kr/images/common/bg_stwHeader.png" width="84.5" alt="Right Image" class="header-img right-img">
         </h1>
+        <div id="hamburger-menu" class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
-    
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul class="menu-container">
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <br>
+            <p>[봉사단 소개]</p>
+            <a href="index 2.html">활동 개요 및 목적</a>
+            <a href="index 3.html">봉사단원 소개</a>
+            <br>
+            <br>
+            <p>[개인정보에 대하여]</p>
+            <a href="index 4.html">개인정보의 중요성</a>
+            <a href="index 5.html">정보보호 10계명</a>
+            <br>
+            <br>
+            <p>[인터넷 사용에 대하여]</p>
+            <a href="index 6.html">네티켓이란?</a>
+            <a href="index 7.html">스마트폰 과의존이란?</a>
+            <br>
+            <br>
+            <p>[사이버 범죄에 대하여]</p>
+            <a href="index 8.html">사이버 폭력이란?</a>
+            <a href="index 9.html">디지털 성범죄란?</a>
+            <a href="index 10.html">불법 사이버 도박이란?</a>
+        </ul>
+    </nav>
     <nav>
         <ul>
             <li><a href="index.html" class="hover-text">메인페이지</a></li>
@@ -298,7 +332,7 @@
             <p> </p>
         </main>
     </div>
-    
+    <div id="modal-background" class="modal-background"></div>
     <footer>
         <img src="https://student.cnsa.hs.kr/images/common/footerLogo.png" width="153" height="40" alt="Footer Image">
         <p>&copy; Data Guardians.All rights reserved. | Developed by Byeong Hun Han</p>
@@ -308,5 +342,38 @@
             document.querySelector("h2").classList.add("fadeInUp");
         });
     </script>
+    <script>
+        // JavaScript 코드
+        var hamburgerMenu = document.getElementById("hamburger-menu");
+        var mobileNav = document.getElementById("mobile-nav");
+        var modalBackground = document.getElementById("modal-background");
+        var isMobileNavOpen = false;
+        
+        hamburgerMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (isMobileNavOpen) {
+                mobileNav.style.display = "none";
+                modalBackground.style.display = "none";
+            } else {
+                mobileNav.style.display = "block";
+                modalBackground.style.display = "block";
+            }
+            isMobileNavOpen = !isMobileNavOpen;
+        });
+        
+        // mobile-nav 클릭 시 이벤트 전파를 막아 아코디언 메뉴가 닫히지 않도록 함
+        mobileNav.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+        
+        document.addEventListener("click", function (e) {
+            if (isMobileNavOpen && e.target !== mobileNav && e.target !== hamburgerMenu) {
+                mobileNav.style.display = "none";
+                modalBackground.style.display = "none";
+                isMobileNavOpen = false;
+            }
+        });
+        
+        </script>
 </body>
 </html>
