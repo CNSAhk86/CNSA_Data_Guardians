@@ -488,7 +488,7 @@ aside p{
         border-color: #007bff; /* 호버 시 테두리 색 변경 */
       }
       
-      /* 주관식 문제 입력란 포커스 효과 */
+      /* 주관식 문제 입력란 포커스  */
       #textAnswer:focus {
         outline: none; /* 포커스 시 기본 아웃라인 제거 */
         border-color: #007bff; /* 포커스 시 테두리 색 변경 */
@@ -653,6 +653,36 @@ footer img {
 @media screen and (max-width: 768px) {
     #menu {
         display: block;
+    }
+
+    .information {
+        width: 248px;
+        height: 107.5px;
+    }
+
+    .net {
+        width: 225px;
+        height: 190px;
+    }
+
+    .cyber1 {
+        width: 284.5px;
+        height: 160.5px;
+    }
+
+    .cyber2 {
+        width: 284.5px;
+        height: 178px;
+    }
+
+    .cargino {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cyber3 {
+        width: 320px;
+        height: 213px;
     }
 }
 
