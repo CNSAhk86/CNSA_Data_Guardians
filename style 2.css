@@ -348,7 +348,7 @@ footer img {
 
 @media screen and (max-width: 1023px) {
     .right-img {
-        transform: translateX(920px);
+        display: none;
     }
 }
 
