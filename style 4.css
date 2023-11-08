@@ -684,6 +684,11 @@ footer img {
         width: 320px;
         height: 213px;
     }
+
+    .peo {
+        width: 250px;
+        height: 219px;
+    }
 }
 
 /* 모바일 화면에서 가로로 배치 */
