@@ -408,18 +408,6 @@ footer img {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .right-img {
-        transform: translateX(920px);
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .right-img {
-        transform: translateX(920px);
-    }
-}
-
 ::-webkit-scrollbar {
     width: 0%;
 }
