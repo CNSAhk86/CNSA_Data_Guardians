@@ -655,7 +655,7 @@ footer img {
 
 @media screen and (max-width: 2360px) {
     .right-img {
-        transform: translateX(920px);
+        transform: translateX(880px);
     }
 }
 ::-webkit-scrollbar {
