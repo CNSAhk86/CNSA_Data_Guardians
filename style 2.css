@@ -346,9 +346,27 @@ footer img {
     }
 }
 
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .right-img {
+        transform: translateX(920px);
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .right-img {
-        display: none;
+        transform: translateX(920px);
+    }
+}
+
+@media screen and (max-width: 2360px) {
+    .right-img {
+        transform: translateX(920px);
     }
 }
 
